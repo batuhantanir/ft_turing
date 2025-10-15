@@ -3,15 +3,10 @@ let box_width = 80
 let horizontal_border () =
   Printf.printf "%s\n" (String.make box_width '*')
 
-let print_transition (state, read, write, action, to_state) =
-      Printf.printf "(%s, %s) -> (%s, %s, %s)\n"
-      state
-      read
-      to_state
-      write
-      action
+let vertical_border () =
+  Printf.printf "*%s*\n" (String.make (box_width - 2) ' ')
 
-let print_header title =
+let vertical_border_with_title title = 
   let title_length = String.length title in
   
   if title_length >= box_width - 4 then
@@ -24,11 +19,21 @@ let print_header title =
         (String.make padding ' ') 
         title 
         (String.make remaining ' ') in
+    Printf.printf "%s\n" centered_title
 
+let print_transition (state, read, write, action, to_state) =
+  Printf.printf "(%s, %s) -> (%s, %s, %s)\n"
+  state
+  read
+  to_state
+  write
+  action
+
+let print_header title =
     horizontal_border ();
-    Printf.printf "*%s*\n" (String.make (box_width - 2) ' ');
-    Printf.printf "%s\n" centered_title;
-    Printf.printf "*%s*\n" (String.make (box_width - 2) ' ');
+    vertical_border ();
+    vertical_border_with_title title;
+    vertical_border ();
     horizontal_border ()
 
 let print_machine_info alphabet states initial finals transitions =
@@ -42,23 +47,13 @@ let print_machine_info alphabet states initial finals transitions =
       ) trans_list
       ) transitions;
   horizontal_border ()
+
+let print_action_info step char_list =
+  Printf.printf "Step: %d\n" step;
+  char_list |> List.iteri (fun i c ->
+    if i == step then 
+      Printf.printf "<%c>" c
+    else
+      Printf.printf "%c" c
+  );
   
-let print_all_transitions transitions =
-  Printf.printf "\n";
-  Printf.printf "========================================\n";
-  Printf.printf "* TRANSITIONS\n";
-  Printf.printf "========================================\n";
-  
-  List.iter (fun (state, trans_list) ->
-    Printf.printf "\nState: %s\n" state;
-    List.iter (fun (read, to_state, write, action) ->
-      Printf.printf "(%s, %s) -> (%s, %s, %s)\n"
-        state
-        read
-        write
-        action
-        to_state
-    ) trans_list
-  ) transitions;
-  
-  Printf.printf "========================================\n"

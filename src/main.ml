@@ -31,4 +31,9 @@ let () =
                 machine.Json_parser.initial
                 machine.Json_parser.finals
                 transitions_tuples;
-      )
+
+              let char_list = List.init (String.length input) (String.get input) in
+              
+              Info.print_action_info 0 char_list;
+         
+        )
