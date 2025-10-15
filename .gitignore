@@ -1,2 +1,12 @@
 ft_turing
 build/
+*.cmi
+*.cmo
+*.cmx
+*.o
+*.cmt
+*.cmti
+*.annot
+*.out
+*.exe
+*.byte    
