@@ -9,4 +9,13 @@ build/
 *.annot
 *.out
 *.exe
-*.byte    
+*.byte
+_opam/
+_opam/*
+-p/*
+-p/
+.vscode/*
+.vscode/
+.opam_env
+*.opam
+*.opam.locked

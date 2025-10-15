@@ -53,18 +53,25 @@ let create_tape_array input =
     if i < String.length input then input.[i] else '.'
   )
 
-let print_action_info step input =
-  let tape_string = create_tape_array input |> Array.to_seq |> String.of_seq in
+let print_action_info step tape_string_raw state read write action to_state =
+  (* Bantı her zaman sabit uzunlukta göster (örn. 30 karakter) *)
+  let fixed_tape_length = 30 in
+  
+  (* Eğer tape_string_raw kısaysa, sağına '.' ekle *)
+  let tape_string = 
+    if String.length tape_string_raw < fixed_tape_length then
+      tape_string_raw ^ String.make (fixed_tape_length - String.length tape_string_raw) '.'
+    else
+      String.sub tape_string_raw 0 fixed_tape_length
+  in
 
-  
-  let prefix = String.sub tape_string 0 step in
-  
-  let current_char = String.make 1 tape_string.[step] in
-  
-  let suffix = String.sub tape_string (step + 1) (String.length tape_string - step - 1) in
-  
+  let len = String.length tape_string in
+  let pos = if len = 0 then 0 else max 0 (min step (len - 1)) in
+
+  let prefix = String.sub tape_string 0 pos in
+  let current_char = String.make 1 tape_string.[pos] in
+  let suffix = if pos + 1 <= len - 1 then String.sub tape_string (pos + 1) (len - pos - 1) else "" in
   let formatted_tape = prefix ^ "<" ^ current_char ^ ">" ^ suffix in
-  
   Printf.printf "[%s] " formatted_tape;
-  print_transition ("q0", "1", "1", "R", "q1");
+  print_transition (state, read, write, action, to_state)
   

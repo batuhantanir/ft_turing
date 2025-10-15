@@ -39,8 +39,7 @@ let () =
                 transitions_tuples;
 
               
-              (* Info.print_action_info  input; *)
-              Turing.turing_loop initial_step 
+              Turing.turing_loop machine input;
 
 
          

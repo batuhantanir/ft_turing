@@ -7,7 +7,7 @@ TARGET_BYTE   = ft_turing.byte
 BUILD_DIR     = build
 UTILS_DIR     = src/utils
 
-MAIN_SRC = src/main.ml
+MAIN_SRC = src/turing.ml src/main.ml
 
 UTILS_SOURCES = $(shell find $(UTILS_DIR) -name '*.ml' 2>/dev/null | sort)
 
@@ -39,6 +39,9 @@ $(BUILD_DIR)/%.cmx: $(UTILS_DIR)/*/%.ml | $(BUILD_DIR)
 $(BUILD_DIR)/%.cmx: src/%.ml | $(BUILD_DIR)
 	@echo "Compiling $< -> $@"
 	$(OCAMLOPT) $(OCAMLFLAGS) -c $< -o $@
+
+# Ensure main is compiled after turing to satisfy module deps
+$(BUILD_DIR)/main.cmx: $(BUILD_DIR)/turing.cmx
 
 native: $(TARGET_NATIVE)
 
