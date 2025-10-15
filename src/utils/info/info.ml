@@ -48,12 +48,23 @@ let print_machine_info alphabet states initial finals transitions =
       ) transitions;
   horizontal_border ()
 
-let print_action_info step char_list =
-  Printf.printf "Step: %d\n" step;
-  char_list |> List.iteri (fun i c ->
-    if i == step then 
-      Printf.printf "<%c>" c
-    else
-      Printf.printf "%c" c
-  );
+let create_tape_array input =
+  Array.init 30 (fun i ->
+    if i < String.length input then input.[i] else '.'
+  )
+
+let print_action_info step input =
+  let tape_string = create_tape_array input |> Array.to_seq |> String.of_seq in
+
+  
+  let prefix = String.sub tape_string 0 step in
+  
+  let current_char = String.make 1 tape_string.[step] in
+  
+  let suffix = String.sub tape_string (step + 1) (String.length tape_string - step - 1) in
+  
+  let formatted_tape = prefix ^ "<" ^ current_char ^ ">" ^ suffix in
+  
+  Printf.printf "[%s] " formatted_tape;
+  print_transition ("q0", "1", "1", "R", "q1");
   

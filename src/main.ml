@@ -16,6 +16,12 @@ let () =
               Printf.eprintf "Machine parse error: %s\n" msg;
               exit 1
           | Ok machine ->
+
+              (* initial state states içerisinde var mı? *)
+              (* alphabet array mi? *)
+              (* alphabet içerisinde blank char var mı? *)
+              (*  *)
+
               Info.print_header machine.Json_parser.name;
               
               let transitions_tuples = List.map (fun (state, trans_list) ->
@@ -32,8 +38,10 @@ let () =
                 machine.Json_parser.finals
                 transitions_tuples;
 
-              let char_list = List.init (String.length input) (String.get input) in
               
-              Info.print_action_info 0 char_list;
+              (* Info.print_action_info  input; *)
+              Turing.turing_loop initial_step 
+
+
          
         )
