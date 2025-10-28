@@ -1,0 +1,42 @@
+{
+  "name": "unary_add_final_correct",
+
+  "alphabet": ["1", ".", "(", "+"],
+  "blank": ".",
+
+  "states": [
+    "find_plus", 
+    "shifting_loop", 
+    "return_to_gap", 
+    "cleanup", 
+    "HALT"
+  ],
+
+  "initial": "find_plus",
+
+  "finals": ["HALT"],
+
+  "transitions": {
+
+    "find_plus": [
+      { "read": "1", "to_state": "find_plus", "write": "1", "action": "RIGHT" },
+      { "read": "+", "to_state": "shifting_loop", "write": ".", "action": "RIGHT" }
+    ],
+
+    "shifting_loop": [
+      { "read": "1", "to_state": "return_to_gap", "write": ".", "action": "LEFT" },
+      { "read": "(", "to_state": "cleanup", "write": ".", "action": "STAY" },
+      { "read": ".", "to_state": "shifting_loop", "write": ".", "action": "RIGHT" }
+    ],
+
+    "return_to_gap": [
+      { "read": "1", "to_state": "return_to_gap", "write": "1", "action": "LEFT" },
+      { "read": ".", "to_state": "shifting_loop", "write": "1", "action": "RIGHT" }
+    ],
+
+    "cleanup": [
+      { "read": ".", "to_state": "HALT", "write": ".", "action": "STAY" }
+    ]
+    
+  }
+}

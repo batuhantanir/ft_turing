@@ -1,0 +1,30 @@
+{
+  "name": "even_zeros",
+  "alphabet": ["0", ".", "y", "n"],
+  "blank": ".",
+  "states": ["even", "odd", "goto_write", "write_y", "write_n", "HALT"],
+  "initial": "even",
+  "finals": ["HALT"],
+  "transitions": {
+    "even": [
+      { "read": "0", "to_state": "odd", "write": "0", "action": "RIGHT" },
+      { "read": ".", "to_state": "goto_write", "write": "y", "action": "LEFT" }
+    ],
+    "odd": [
+      { "read": "0", "to_state": "even", "write": "0", "action": "RIGHT" },
+      { "read": ".", "to_state": "goto_write", "write": "n", "action": "LEFT" }
+    ],
+    "goto_write": [
+      { "read": "0", "to_state": "goto_write", "write": "0", "action": "LEFT" },
+      { "read": ".", "to_state": "write_y", "write": ".", "action": "RIGHT" },
+      { "read": "y", "to_state": "write_y", "write": "y", "action": "STAY" },
+      { "read": "n", "to_state": "write_n", "write": "n", "action": "STAY" }
+    ],
+    "write_y": [
+        { "read": "y", "to_state": "HALT", "write": "y", "action": "STAY" }
+    ],
+    "write_n": [
+        { "read": "n", "to_state": "HALT", "write": "n", "action": "STAY" }
+    ]
+  }
+}

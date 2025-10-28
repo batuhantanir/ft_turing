@@ -54,10 +54,8 @@ let create_tape_array input =
   )
 
 let print_action_info step tape_string_raw state read write action to_state =
-  (* Bantı her zaman sabit uzunlukta göster (örn. 30 karakter) *)
   let fixed_tape_length = 30 in
   
-  (* Eğer tape_string_raw kısaysa, sağına '.' ekle *)
   let tape_string = 
     if String.length tape_string_raw < fixed_tape_length then
       tape_string_raw ^ String.make (fixed_tape_length - String.length tape_string_raw) '.'

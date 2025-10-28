@@ -20,7 +20,8 @@ let () =
               (* initial state states içerisinde var mı? *)
               (* alphabet array mi? *)
               (* alphabet içerisinde blank char var mı? *)
-              (*  *)
+              (* inputtan alphabet kontrolü *)
+              (* read ve write dataları alphabet kontrolü *)
 
               Info.print_header machine.Json_parser.name;
               
@@ -37,10 +38,6 @@ let () =
                 machine.Json_parser.initial
                 machine.Json_parser.finals
                 transitions_tuples;
-
               
               Turing.turing_loop machine input;
-
-
-         
         )
