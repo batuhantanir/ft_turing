@@ -1,6 +1,6 @@
 NAME    = ft_turing
 SRC_DIR = src
-SRCS    = $(SRC_DIR)/main.ml
+SRCS    = $(SRC_DIR)/json.ml $(SRC_DIR)/main.ml
 
 OCAMLOPT = ocamlopt
 OCAMLC   = ocamlc
@@ -16,12 +16,14 @@ check_deps:
 	  (echo "ocamlc not found. Please install OCaml." && exit 1)
 
 $(NAME): $(SRCS)
+	$(OCAMLOPT) -c $(SRC_DIR)/json.ml
 	$(OCAMLOPT) -I $(SRC_DIR) -c $(SRC_DIR)/main.ml
-	$(OCAMLOPT) -o $(NAME) $(SRC_DIR)/main.cmx
+	$(OCAMLOPT) -o $(NAME) $(SRC_DIR)/json.cmx $(SRC_DIR)/main.cmx
 
 byte: $(SRCS)
+	$(OCAMLC) -I $(SRC_DIR) -c $(SRC_DIR)/json.ml
 	$(OCAMLC) -I $(SRC_DIR) -c $(SRC_DIR)/main.ml
-	$(OCAMLC) -o $(NAME).byte $(SRC_DIR)/main.cmo
+	$(OCAMLC) -o $(NAME).byte $(SRC_DIR)/json.cmo $(SRC_DIR)/main.cmo
 
 clean:
 	rm -f $(SRC_DIR)/*.cmi $(SRC_DIR)/*.cmo $(SRC_DIR)/*.cmx $(SRC_DIR)/*.o
