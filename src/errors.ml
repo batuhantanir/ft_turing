@@ -1,0 +1,2 @@
+exception Invalid_machine of string
+exception Invalid_input of string

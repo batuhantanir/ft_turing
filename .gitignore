@@ -1,4 +1,6 @@
 *.cmi
 *.cmx
+*.cmo
 *.o
-ft_turing
+ft_turing*
+_opam
