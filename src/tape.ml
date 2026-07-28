@@ -30,6 +30,14 @@ let write_head t symbol = { t with head = symbol }
 let string_of_tape t =
   let left_str = String.concat "" (List.rev t.left) in
   let right_str = String.concat "" t.right in
+  
   let tape_content = left_str ^ "<" ^ t.head ^ ">" ^ right_str in
   
-  Printf.sprintf "[%-30s]" tape_content
+  let target_width = 20 in
+  let current_len = String.length tape_content in
+  
+  let pad_len = max 0 (target_width - current_len) in
+  
+  let padding = String.make pad_len '.' in
+  
+  "[" ^ tape_content ^ padding ^ "]"
