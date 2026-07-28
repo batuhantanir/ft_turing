@@ -16,3 +16,9 @@ type machine = {
   finals : string list;
   transitions : (string * transition list) list;
 }
+
+type tape = {
+  left : string list;
+  head : string;
+  right : string list;
+}

@@ -1,6 +1,8 @@
 *.cmi
 *.cmx
 *.cmo
+*.cmt
 *.o
 ft_turing*
 _opam
+.vscode

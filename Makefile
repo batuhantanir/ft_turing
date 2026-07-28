@@ -1,19 +1,19 @@
 NAME    = ft_turing
 SRC_DIR = src
 OBJ_DIR = build
-MODULES = json errors types parse validate main
+MODULES = json errors types parse validate tape utils cli  main
 SRCS    = $(addprefix $(SRC_DIR)/,$(addsuffix .ml,$(MODULES)))
 
 NATIVE_OBJS = $(addprefix $(OBJ_DIR)/,$(addsuffix .cmx,$(MODULES)))
 BYTE_OBJS   = $(addprefix $(OBJ_DIR)/,$(addsuffix .cmo,$(MODULES)))
 
-OCAMLOPT = ocamlopt
-OCAMLC   = ocamlc
+OCAMLOPT = ocamlopt -bin-annot
+OCAMLC   = ocamlc -bin-annot
 OPAM     = opam
 OPAM_SWITCH_DIR = _opam
 OPAM_SWITCH = $(CURDIR)
 OCAML_COMPILER = ocaml-base-compiler.5.2.0
-OPAM_PACKAGES = ocamlfind
+OPAM_PACKAGES = ocamlfind ocamlformat ocaml-lsp-server merlin
 OPAM_EXEC = $(OPAM) exec --switch=$(OPAM_SWITCH) --
 
 .PHONY: all clean fclean re check_deps byte
@@ -50,7 +50,6 @@ byte: check_deps $(SRCS) | $(OBJ_DIR)
 	$(OPAM_EXEC) $(OCAMLC) -I $(OBJ_DIR) -o $(NAME).byte $(BYTE_OBJS)
 
 clean:
-	rm -f $(SRC_DIR)/*.cmi $(SRC_DIR)/*.cmo $(SRC_DIR)/*.cmx $(SRC_DIR)/*.o
 	rm -rf $(OBJ_DIR)
 
 fclean: clean

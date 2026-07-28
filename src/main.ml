@@ -2,15 +2,8 @@ open Errors
 open Types
 open Parse
 open Validate
-
-let usage () =
-  print_string
-    "usage: ft_turing [-h] jsonfile input\n\n\
-     positional arguments:\n\
-    \  jsonfile              json description of the machine\n\
-    \  input                 input of the machine\n\n\
-     optional arguments:\n\
-    \  -h, --help            show this help message and exit\n"
+open Tape
+open Cli
 
 let () =
   let args = Array.to_list Sys.argv |> List.tl in
@@ -21,7 +14,10 @@ let () =
       let json = Json.from_file jsonfile in
       let m = Parse.parse_machine json in
       Validate.validate_machine m;
-      exit (0)
+      let tape = tape_of_input m input in
+      print_header m;
+      let ok = run m tape in
+      exit (if ok then 0 else 1)
       with
       | Sys_error msg ->
       Printf.eprintf "Error: %s\n" msg;
