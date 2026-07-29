@@ -17,8 +17,4 @@ type machine = {
   transitions : (string * transition list) list;
 }
 
-type tape = {
-  left : string list;
-  head : string;
-  right : string list;
-}
+type tape = { left : string list; head : string; right : string list }

@@ -2,12 +2,16 @@ open Errors
 open Types
 
 let tape_of_input m input =
-  if String.length input = 0 then raise (Invalid_input "input must not be empty");
-  let chars = List.init (String.length input) (fun i -> String.make 1 input.[i]) in
+  if String.length input = 0 then
+    raise (Invalid_input "input must not be empty");
+  let chars =
+    List.init (String.length input) (fun i -> String.make 1 input.[i])
+  in
   List.iter
     (fun c ->
       if not (List.mem c m.alphabet) then
-        raise (Invalid_input (Printf.sprintf "character '%s' not in alphabet" c));
+        raise
+          (Invalid_input (Printf.sprintf "character '%s' not in alphabet" c));
       if c = m.blank then
         raise (Invalid_input "blank character must not be part of the input"))
     chars;
@@ -30,14 +34,14 @@ let write_head t symbol = { t with head = symbol }
 let string_of_tape t =
   let left_str = String.concat "" (List.rev t.left) in
   let right_str = String.concat "" t.right in
-  
+
   let tape_content = left_str ^ "<" ^ t.head ^ ">" ^ right_str in
-  
+
   let target_width = 20 in
   let current_len = String.length tape_content in
-  
+
   let pad_len = max 0 (target_width - current_len) in
-  
+
   let padding = String.make pad_len '.' in
-  
+
   "[" ^ tape_content ^ padding ^ "]"
