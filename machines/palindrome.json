@@ -1,0 +1,274 @@
+{
+    "name": "palindrome",
+    "alphabet": [
+        "0",
+        "1",
+        "X",
+        "Y",
+        ".",
+        "y",
+        "n"
+    ],
+    "blank": ".",
+    "states": [
+        "start",
+        "right0",
+        "right1",
+        "compare0",
+        "compare1",
+        "backleft",
+        "acceptmove",
+        "rejectmove",
+        "HALT"
+    ],
+    "initial": "start",
+    "finals": [
+        "HALT"
+    ],
+    "transitions": {
+        "start": [
+            {
+                "read": "X",
+                "to_state": "start",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "Y",
+                "to_state": "start",
+                "write": "Y",
+                "action": "RIGHT"
+            },
+            {
+                "read": "0",
+                "to_state": "right0",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "right1",
+                "write": "Y",
+                "action": "RIGHT"
+            },
+            {
+                "read": ".",
+                "to_state": "HALT",
+                "write": "y",
+                "action": "LEFT"
+            }
+        ],
+        "right0": [
+            {
+                "read": "0",
+                "to_state": "right0",
+                "write": "0",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "right0",
+                "write": "1",
+                "action": "RIGHT"
+            },
+            {
+                "read": "X",
+                "to_state": "compare0",
+                "write": "X",
+                "action": "LEFT"
+            },
+            {
+                "read": "Y",
+                "to_state": "compare0",
+                "write": "Y",
+                "action": "LEFT"
+            },
+            {
+                "read": ".",
+                "to_state": "compare0",
+                "write": ".",
+                "action": "LEFT"
+            }
+        ],
+        "right1": [
+            {
+                "read": "0",
+                "to_state": "right1",
+                "write": "0",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "right1",
+                "write": "1",
+                "action": "RIGHT"
+            },
+            {
+                "read": "X",
+                "to_state": "compare1",
+                "write": "X",
+                "action": "LEFT"
+            },
+            {
+                "read": "Y",
+                "to_state": "compare1",
+                "write": "Y",
+                "action": "LEFT"
+            },
+            {
+                "read": ".",
+                "to_state": "compare1",
+                "write": ".",
+                "action": "LEFT"
+            }
+        ],
+        "compare0": [
+            {
+                "read": "0",
+                "to_state": "backleft",
+                "write": "X",
+                "action": "LEFT"
+            },
+            {
+                "read": "1",
+                "to_state": "rejectmove",
+                "write": "1",
+                "action": "LEFT"
+            },
+            {
+                "read": "X",
+                "to_state": "acceptmove",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "Y",
+                "to_state": "acceptmove",
+                "write": "Y",
+                "action": "RIGHT"
+            }
+        ],
+        "compare1": [
+            {
+                "read": "1",
+                "to_state": "backleft",
+                "write": "Y",
+                "action": "LEFT"
+            },
+            {
+                "read": "0",
+                "to_state": "rejectmove",
+                "write": "0",
+                "action": "LEFT"
+            },
+            {
+                "read": "X",
+                "to_state": "acceptmove",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "Y",
+                "to_state": "acceptmove",
+                "write": "Y",
+                "action": "RIGHT"
+            }
+        ],
+        "backleft": [
+            {
+                "read": "0",
+                "to_state": "backleft",
+                "write": "0",
+                "action": "LEFT"
+            },
+            {
+                "read": "1",
+                "to_state": "backleft",
+                "write": "1",
+                "action": "LEFT"
+            },
+            {
+                "read": "X",
+                "to_state": "backleft",
+                "write": "X",
+                "action": "LEFT"
+            },
+            {
+                "read": "Y",
+                "to_state": "backleft",
+                "write": "Y",
+                "action": "LEFT"
+            },
+            {
+                "read": ".",
+                "to_state": "start",
+                "write": ".",
+                "action": "RIGHT"
+            }
+        ],
+        "acceptmove": [
+            {
+                "read": "0",
+                "to_state": "acceptmove",
+                "write": "0",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "acceptmove",
+                "write": "1",
+                "action": "RIGHT"
+            },
+            {
+                "read": "X",
+                "to_state": "acceptmove",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "Y",
+                "to_state": "acceptmove",
+                "write": "Y",
+                "action": "RIGHT"
+            },
+            {
+                "read": ".",
+                "to_state": "HALT",
+                "write": "y",
+                "action": "LEFT"
+            }
+        ],
+        "rejectmove": [
+            {
+                "read": "0",
+                "to_state": "rejectmove",
+                "write": "0",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "rejectmove",
+                "write": "1",
+                "action": "RIGHT"
+            },
+            {
+                "read": "X",
+                "to_state": "rejectmove",
+                "write": "X",
+                "action": "RIGHT"
+            },
+            {
+                "read": "Y",
+                "to_state": "rejectmove",
+                "write": "Y",
+                "action": "RIGHT"
+            },
+            {
+                "read": ".",
+                "to_state": "HALT",
+                "write": "n",
+                "action": "LEFT"
+            }
+        ]
+    }
+}
