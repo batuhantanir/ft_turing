@@ -40,7 +40,7 @@ let print_header m =
   Printf.printf "%s\n" bar
 
 let run m tape =
-  let max_steps = 2000 in
+  let max_steps = 200_000 in
 
   let rec loop state t steps =
     if List.mem state m.finals then begin

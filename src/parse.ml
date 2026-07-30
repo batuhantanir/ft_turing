@@ -47,8 +47,6 @@ let parse_machine json =
   let transitions =
     List.map
       (fun (state, trans_list) ->
-        Printf.printf "Parsing transitions for state: %s\n" state;
-
         if not (List.mem state states) then
           raise
             (Invalid_machine
