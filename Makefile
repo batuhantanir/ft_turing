@@ -1,7 +1,7 @@
 NAME    = ft_turing
 SRC_DIR = src
 OBJ_DIR = build
-MODULES = json errors types parse validate tape utils cli  main
+MODULES = errors types json parse validate tape utils cli machine_loop main
 SRCS    = $(addprefix $(SRC_DIR)/,$(addsuffix .ml,$(MODULES)))
 
 NATIVE_OBJS = $(addprefix $(OBJ_DIR)/,$(addsuffix .cmx,$(MODULES)))

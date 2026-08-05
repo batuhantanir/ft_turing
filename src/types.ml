@@ -18,3 +18,8 @@ type machine = {
 }
 
 type tape = { left : string list; head : string; right : string list }
+
+type json =
+  | JString of string
+  | JList of json list
+  | JObj of (string * json) list

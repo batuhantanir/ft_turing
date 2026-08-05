@@ -4,6 +4,7 @@ open Parse
 open Validate
 open Tape
 open Cli
+open Machine_loop
 
 let () =
   let args = Array.to_list Sys.argv |> List.tl in
@@ -25,13 +26,13 @@ let () =
       | Sys_error msg ->
           Printf.eprintf "Error: %s\n" msg;
           exit 1
-      | Json.Json_error msg ->
+      | Errors.Json_error msg ->
           Printf.eprintf "Error: invalid JSON: %s\n" msg;
           exit 1
-      | Invalid_machine msg ->
+      | Errors.Invalid_machine msg ->
           Printf.eprintf "Error: invalid machine description: %s\n" msg;
           exit 1
-      | Invalid_input msg ->
+      | Errors.Invalid_input msg ->
           Printf.eprintf "Error: invalid input: %s\n" msg;
           exit 1
       | e ->

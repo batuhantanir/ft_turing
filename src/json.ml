@@ -1,9 +1,5 @@
-type json =
-  | JString of string
-  | JList of json list
-  | JObj of (string * json) list
-
-exception Json_error of string
+open Types
+open Errors
 
 let parse (s : string) : json =
   let n = String.length s in
