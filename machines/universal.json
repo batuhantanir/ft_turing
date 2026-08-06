@@ -1,0 +1,6694 @@
+{
+  "name": "universal",
+  "alphabet": [
+    "#",
+    "$",
+    "+",
+    ".",
+    "1",
+    ":",
+    ";",
+    "A",
+    "B",
+    "C",
+    "D",
+    "L",
+    "R",
+    "_",
+    "a",
+    "b",
+    "c",
+    "d",
+    "~"
+  ],
+  "blank": "_",
+  "states": [
+    "atData_a_+_L",
+    "atData_a_+_R",
+    "atData_a_._L",
+    "atData_a_._R",
+    "atData_a_1_L",
+    "atData_a_1_R",
+    "atData_b_+_L",
+    "atData_b_+_R",
+    "atData_b_._L",
+    "atData_b_._R",
+    "atData_b_1_L",
+    "atData_b_1_R",
+    "atData_c_+_L",
+    "atData_c_+_R",
+    "atData_c_._L",
+    "atData_c_._R",
+    "atData_c_1_L",
+    "atData_c_1_R",
+    "atData_d_+_L",
+    "atData_d_+_R",
+    "atData_d_._L",
+    "atData_d_._R",
+    "atData_d_1_L",
+    "atData_d_1_R",
+    "atGap_a_+_L",
+    "atGap_a_+_R",
+    "atGap_a_._L",
+    "atGap_a_._R",
+    "atGap_a_1_L",
+    "atGap_a_1_R",
+    "atGap_b_+_L",
+    "atGap_b_+_R",
+    "atGap_b_._L",
+    "atGap_b_._R",
+    "atGap_b_1_L",
+    "atGap_b_1_R",
+    "atGap_c_+_L",
+    "atGap_c_+_R",
+    "atGap_c_._L",
+    "atGap_c_._R",
+    "atGap_c_1_L",
+    "atGap_c_1_R",
+    "atGap_d_+_L",
+    "atGap_d_+_R",
+    "atGap_d_._L",
+    "atGap_d_._R",
+    "atGap_d_1_L",
+    "atGap_d_1_R",
+    "cmp1_a_+",
+    "cmp1_a_.",
+    "cmp1_a_1",
+    "cmp1_b_+",
+    "cmp1_b_.",
+    "cmp1_b_1",
+    "cmp1_c_+",
+    "cmp1_c_.",
+    "cmp1_c_1",
+    "cmp2_a_+",
+    "cmp2_a_.",
+    "cmp2_a_1",
+    "cmp2_b_+",
+    "cmp2_b_.",
+    "cmp2_b_1",
+    "cmp2_c_+",
+    "cmp2_c_.",
+    "cmp2_c_1",
+    "placeMarkerL1_a",
+    "placeMarkerL1_b",
+    "placeMarkerL1_c",
+    "placeMarkerL1_d",
+    "placeMarkerL2_a",
+    "placeMarkerL2_b",
+    "placeMarkerL2_c",
+    "placeMarkerL2_d",
+    "placeMarkerL3_a",
+    "placeMarkerL3_b",
+    "placeMarkerL3_c",
+    "placeMarkerL3_d",
+    "placeMarkerR_a",
+    "placeMarkerR_b",
+    "placeMarkerR_c",
+    "placeMarkerR_d",
+    "readAction_a_+",
+    "readAction_a_.",
+    "readAction_a_1",
+    "readAction_b_+",
+    "readAction_b_.",
+    "readAction_b_1",
+    "readAction_c_+",
+    "readAction_c_.",
+    "readAction_c_1",
+    "readAction_d_+",
+    "readAction_d_.",
+    "readAction_d_1",
+    "readTostate",
+    "readWrite_a",
+    "readWrite_b",
+    "readWrite_c",
+    "readWrite_d",
+    "read_a",
+    "read_b",
+    "read_c",
+    "read_d",
+    "seek0",
+    "skip_a_+",
+    "skip_a_.",
+    "skip_a_1",
+    "skip_b_+",
+    "skip_b_.",
+    "skip_b_1",
+    "skip_c_+",
+    "skip_c_.",
+    "skip_c_1",
+    "toAction_a_+",
+    "toAction_a_.",
+    "toAction_a_1",
+    "toAction_b_+",
+    "toAction_b_.",
+    "toAction_b_1",
+    "toAction_c_+",
+    "toAction_c_.",
+    "toAction_c_1",
+    "toAction_d_+",
+    "toAction_d_.",
+    "toAction_d_1",
+    "toDollar_a_+_L",
+    "toDollar_a_+_R",
+    "toDollar_a_._L",
+    "toDollar_a_._R",
+    "toDollar_a_1_L",
+    "toDollar_a_1_R",
+    "toDollar_b_+_L",
+    "toDollar_b_+_R",
+    "toDollar_b_._L",
+    "toDollar_b_._R",
+    "toDollar_b_1_L",
+    "toDollar_b_1_R",
+    "toDollar_c_+_L",
+    "toDollar_c_+_R",
+    "toDollar_c_._L",
+    "toDollar_c_._R",
+    "toDollar_c_1_L",
+    "toDollar_c_1_R",
+    "toDollar_d_+_L",
+    "toDollar_d_+_R",
+    "toDollar_d_._L",
+    "toDollar_d_._R",
+    "toDollar_d_1_L",
+    "toDollar_d_1_R",
+    "toRead_a_+",
+    "toRead_a_.",
+    "toRead_a_1",
+    "toRead_b_+",
+    "toRead_b_.",
+    "toRead_b_1",
+    "toRead_c_+",
+    "toRead_c_.",
+    "toRead_c_1",
+    "toTostate",
+    "toWrite_a",
+    "toWrite_b",
+    "toWrite_c",
+    "toWrite_d",
+    "travelBack2_a_+",
+    "travelBack2_a_.",
+    "travelBack2_a_1",
+    "travelBack2_b_+",
+    "travelBack2_b_.",
+    "travelBack2_b_1",
+    "travelBack2_c_+",
+    "travelBack2_c_.",
+    "travelBack2_c_1",
+    "travelBack_a_+",
+    "travelBack_a_.",
+    "travelBack_a_1",
+    "travelBack_b_+",
+    "travelBack_b_.",
+    "travelBack_b_1",
+    "travelBack_c_+",
+    "travelBack_c_.",
+    "travelBack_c_1"
+  ],
+  "initial": "seek0",
+  "finals": [
+    "read_d"
+  ],
+  "transitions": {
+    "seek0": [
+      {
+        "read": "b",
+        "to_state": "seek0",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "seek0",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "seek0",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "seek0",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "seek0",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "#",
+        "to_state": "seek0",
+        "write": "#",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "seek0",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "seek0",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "seek0",
+        "write": "$",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "seek0",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "seek0",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "seek0",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "seek0",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "seek0",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "read_a",
+        "write": "A",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "read_b",
+        "write": "B",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "read_c",
+        "write": "C",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "read_d",
+        "write": "D",
+        "action": "RIGHT"
+      }
+    ],
+    "read_a": [
+      {
+        "read": "1",
+        "to_state": "travelBack_a_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_a_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_a_+",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "read_b": [
+      {
+        "read": "1",
+        "to_state": "travelBack_b_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_b_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_b_+",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "read_c": [
+      {
+        "read": "1",
+        "to_state": "travelBack_c_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_c_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_c_+",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack_a_1": [
+      {
+        "read": "B",
+        "to_state": "travelBack_a_1",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_a_1",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_a_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_a_1",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_a_1",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_a_1",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_a_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_a_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_a_1",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_a_1": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_a_1",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_a_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_a_1",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_a_1",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_a_1",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_a_1",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_a_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_a_1",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_a_1",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_a_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_a_1",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_a_1",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_a_1": [
+      {
+        "read": "a",
+        "to_state": "toRead_a_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_a_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_1",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_a_1": [
+      {
+        "read": ":",
+        "to_state": "cmp2_a_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_a_1": [
+      {
+        "read": "1",
+        "to_state": "toTostate",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_a_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_a_1",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_a_1": [
+      {
+        "read": "b",
+        "to_state": "skip_a_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_a_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_a_1",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_a_1",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_a_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_a_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_1",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_a_1",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_a_1",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_a_1",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_a_.": [
+      {
+        "read": "B",
+        "to_state": "travelBack_a_.",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_a_.",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_a_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_a_.",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_a_.",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_a_.",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_a_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_a_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_a_.",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_a_.": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_a_.",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_a_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_a_.",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_a_.",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_a_.",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_a_.",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_a_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_a_.",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_a_.",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_a_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_a_.",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_a_.",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_a_.": [
+      {
+        "read": "a",
+        "to_state": "toRead_a_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_a_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_.",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_a_.": [
+      {
+        "read": ":",
+        "to_state": "cmp2_a_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_a_.": [
+      {
+        "read": "1",
+        "to_state": "skip_a_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toTostate",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_a_.",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_a_.": [
+      {
+        "read": "b",
+        "to_state": "skip_a_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_a_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_a_.",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_a_.",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_a_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_a_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_.",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_a_.",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_a_.",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_a_.",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_a_+": [
+      {
+        "read": "B",
+        "to_state": "travelBack_a_+",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_a_+",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_a_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_a_+",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_a_+",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_a_+",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_a_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_a_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_a_+",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_a_+": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_a_+",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_a_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_a_+",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_a_+",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_a_+",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_a_+",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_a_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_a_+",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_a_+",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_a_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_a_+",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_a_+",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_a_+": [
+      {
+        "read": "a",
+        "to_state": "toRead_a_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_a_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_+",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_a_+": [
+      {
+        "read": ":",
+        "to_state": "cmp2_a_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_a_+": [
+      {
+        "read": "1",
+        "to_state": "skip_a_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_a_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toTostate",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_a_+": [
+      {
+        "read": "b",
+        "to_state": "skip_a_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_a_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_a_+",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_a_+",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_a_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_a_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_a_+",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_a_+",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_a_+",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_a_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_a_+",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_b_1": [
+      {
+        "read": "B",
+        "to_state": "travelBack_b_1",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_b_1",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_b_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_b_1",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_b_1",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_b_1",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_b_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_b_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_b_1",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_b_1": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_b_1",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_b_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_b_1",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_b_1",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_b_1",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_b_1",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_b_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_b_1",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_b_1",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_b_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_b_1",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_b_1",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_b_1": [
+      {
+        "read": "a",
+        "to_state": "skip_b_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "toRead_b_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_1",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_b_1": [
+      {
+        "read": ":",
+        "to_state": "cmp2_b_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_b_1": [
+      {
+        "read": "1",
+        "to_state": "toTostate",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_b_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_b_1",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_b_1": [
+      {
+        "read": "b",
+        "to_state": "skip_b_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_b_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_b_1",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_b_1",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_b_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_b_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_1",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_b_1",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_b_1",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_b_1",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_b_.": [
+      {
+        "read": "B",
+        "to_state": "travelBack_b_.",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_b_.",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_b_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_b_.",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_b_.",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_b_.",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_b_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_b_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_b_.",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_b_.": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_b_.",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_b_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_b_.",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_b_.",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_b_.",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_b_.",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_b_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_b_.",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_b_.",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_b_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_b_.",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_b_.",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_b_.": [
+      {
+        "read": "a",
+        "to_state": "skip_b_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "toRead_b_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_.",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_b_.": [
+      {
+        "read": ":",
+        "to_state": "cmp2_b_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_b_.": [
+      {
+        "read": "1",
+        "to_state": "skip_b_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toTostate",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_b_.",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_b_.": [
+      {
+        "read": "b",
+        "to_state": "skip_b_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_b_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_b_.",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_b_.",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_b_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_b_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_.",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_b_.",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_b_.",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_b_.",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_b_+": [
+      {
+        "read": "B",
+        "to_state": "travelBack_b_+",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_b_+",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_b_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_b_+",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_b_+",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_b_+",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_b_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_b_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_b_+",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_b_+": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_b_+",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_b_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_b_+",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_b_+",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_b_+",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_b_+",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_b_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_b_+",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_b_+",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_b_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_b_+",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_b_+",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_b_+": [
+      {
+        "read": "a",
+        "to_state": "skip_b_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "toRead_b_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_+",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_b_+": [
+      {
+        "read": ":",
+        "to_state": "cmp2_b_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_b_+": [
+      {
+        "read": "1",
+        "to_state": "skip_b_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_b_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toTostate",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_b_+": [
+      {
+        "read": "b",
+        "to_state": "skip_b_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_b_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_b_+",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_b_+",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_b_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_b_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_b_+",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_b_+",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_b_+",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_b_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_b_+",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_c_1": [
+      {
+        "read": "B",
+        "to_state": "travelBack_c_1",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_c_1",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_c_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_c_1",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_c_1",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_c_1",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_c_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_c_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_c_1",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_c_1": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_c_1",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_c_1",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_c_1",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_c_1",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_c_1",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_c_1",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_c_1",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_c_1",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_c_1",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_c_1",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_c_1",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_c_1",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_c_1": [
+      {
+        "read": "a",
+        "to_state": "skip_c_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_c_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toRead_c_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_1",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_c_1": [
+      {
+        "read": ":",
+        "to_state": "cmp2_c_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_c_1": [
+      {
+        "read": "1",
+        "to_state": "toTostate",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_c_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_c_1",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_c_1": [
+      {
+        "read": "b",
+        "to_state": "skip_c_1",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_c_1",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_c_1",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_c_1",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_c_1",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_c_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_1",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_c_1",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_c_1",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_c_1",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_c_1",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_c_.": [
+      {
+        "read": "B",
+        "to_state": "travelBack_c_.",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_c_.",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_c_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_c_.",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_c_.",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_c_.",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_c_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_c_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_c_.",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_c_.": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_c_.",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_c_.",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_c_.",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_c_.",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_c_.",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_c_.",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_c_.",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_c_.",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_c_.",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_c_.",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_c_.",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_c_.",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_c_.": [
+      {
+        "read": "a",
+        "to_state": "skip_c_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_c_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toRead_c_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_.",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_c_.": [
+      {
+        "read": ":",
+        "to_state": "cmp2_c_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_c_.": [
+      {
+        "read": "1",
+        "to_state": "skip_c_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toTostate",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_c_.",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_c_.": [
+      {
+        "read": "b",
+        "to_state": "skip_c_.",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_c_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_c_.",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_c_.",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_c_.",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_c_.",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_.",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_c_.",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_c_.",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_c_.",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_c_.",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "travelBack_c_+": [
+      {
+        "read": "B",
+        "to_state": "travelBack_c_+",
+        "write": "B",
+        "action": "LEFT"
+      },
+      {
+        "read": "C",
+        "to_state": "travelBack_c_+",
+        "write": "C",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack_c_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "D",
+        "to_state": "travelBack_c_+",
+        "write": "D",
+        "action": "LEFT"
+      },
+      {
+        "read": "~",
+        "to_state": "travelBack_c_+",
+        "write": "~",
+        "action": "LEFT"
+      },
+      {
+        "read": "A",
+        "to_state": "travelBack_c_+",
+        "write": "A",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack_c_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack_c_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "$",
+        "to_state": "travelBack2_c_+",
+        "write": "$",
+        "action": "LEFT"
+      }
+    ],
+    "travelBack2_c_+": [
+      {
+        "read": "b",
+        "to_state": "travelBack2_c_+",
+        "write": "b",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "travelBack2_c_+",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "R",
+        "to_state": "travelBack2_c_+",
+        "write": "R",
+        "action": "LEFT"
+      },
+      {
+        "read": "L",
+        "to_state": "travelBack2_c_+",
+        "write": "L",
+        "action": "LEFT"
+      },
+      {
+        "read": ";",
+        "to_state": "travelBack2_c_+",
+        "write": ";",
+        "action": "LEFT"
+      },
+      {
+        "read": "a",
+        "to_state": "travelBack2_c_+",
+        "write": "a",
+        "action": "LEFT"
+      },
+      {
+        "read": "1",
+        "to_state": "travelBack2_c_+",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "d",
+        "to_state": "travelBack2_c_+",
+        "write": "d",
+        "action": "LEFT"
+      },
+      {
+        "read": ":",
+        "to_state": "travelBack2_c_+",
+        "write": ":",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "travelBack2_c_+",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "c",
+        "to_state": "travelBack2_c_+",
+        "write": "c",
+        "action": "LEFT"
+      },
+      {
+        "read": "#",
+        "to_state": "cmp1_c_+",
+        "write": "#",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp1_c_+": [
+      {
+        "read": "a",
+        "to_state": "skip_c_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "skip_c_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toRead_c_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_+",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toRead_c_+": [
+      {
+        "read": ":",
+        "to_state": "cmp2_c_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "cmp2_c_+": [
+      {
+        "read": "1",
+        "to_state": "skip_c_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_c_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toTostate",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "skip_c_+": [
+      {
+        "read": "b",
+        "to_state": "skip_c_+",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "skip_c_+",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "skip_c_+",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "skip_c_+",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "skip_c_+",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "skip_c_+",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "skip_c_+",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "skip_c_+",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "skip_c_+",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "skip_c_+",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "cmp1_c_+",
+        "write": ";",
+        "action": "RIGHT"
+      }
+    ],
+    "toTostate": [
+      {
+        "read": ":",
+        "to_state": "readTostate",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readTostate": [
+      {
+        "read": "a",
+        "to_state": "toWrite_a",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "b",
+        "to_state": "toWrite_b",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toWrite_c",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toWrite_d",
+        "write": "d",
+        "action": "RIGHT"
+      }
+    ],
+    "toWrite_a": [
+      {
+        "read": ":",
+        "to_state": "readWrite_a",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readWrite_a": [
+      {
+        "read": "1",
+        "to_state": "toAction_a_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toAction_a_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toAction_a_+",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toAction_a_1": [
+      {
+        "read": ":",
+        "to_state": "readAction_a_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_a_1": [
+      {
+        "read": "R",
+        "to_state": "toDollar_a_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_1_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_1_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_1_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_1_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_1_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_1_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_1_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_1_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_1_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_1_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_1_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_a",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_a",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_a",
+        "write": "1",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_1_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_1_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_1_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_1_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_1_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_1_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_1_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_1_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_1_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_1_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_1_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_a",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_a",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_a",
+        "write": "1",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_a_.": [
+      {
+        "read": ":",
+        "to_state": "readAction_a_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_a_.": [
+      {
+        "read": "R",
+        "to_state": "toDollar_a_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_._L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_._R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_._R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_._R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_._R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_._R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_._R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_._R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_._R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_._R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_._R": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_._R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_._R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_a",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_a",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_a",
+        "write": ".",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_._L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_._L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_._L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_._L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_._L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_._L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_._L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_._L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_._L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_._L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_._L": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_._L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_._L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_a",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_a",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_a",
+        "write": ".",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_a_+": [
+      {
+        "read": ":",
+        "to_state": "readAction_a_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_a_+": [
+      {
+        "read": "R",
+        "to_state": "toDollar_a_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_+_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_+_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_+_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_+_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_+_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_+_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_+_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_+_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_+_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_+_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_+_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_a",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_a",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_a",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_a_+_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_a_+_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_a_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_a_+_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_a_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_a_+_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_a_+_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_a_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_a_+_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_a_+_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_a_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_a_+_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_a_+_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_a_+_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_a_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_a_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_a_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_a_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_a_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_a_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_a_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_a_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_a_+_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_a",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_a",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_a",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "toWrite_b": [
+      {
+        "read": ":",
+        "to_state": "readWrite_b",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readWrite_b": [
+      {
+        "read": "1",
+        "to_state": "toAction_b_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toAction_b_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toAction_b_+",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toAction_b_1": [
+      {
+        "read": ":",
+        "to_state": "readAction_b_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_b_1": [
+      {
+        "read": "R",
+        "to_state": "toDollar_b_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_1_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_1_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_1_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_1_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_1_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_1_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_1_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_1_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_1_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_1_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_1_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_b",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_b",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_b",
+        "write": "1",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_1_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_1_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_1_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_1_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_1_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_1_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_1_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_1_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_1_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_1_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_1_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_b",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_b",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_b",
+        "write": "1",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_b_.": [
+      {
+        "read": ":",
+        "to_state": "readAction_b_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_b_.": [
+      {
+        "read": "R",
+        "to_state": "toDollar_b_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_._L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_._R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_._R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_._R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_._R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_._R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_._R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_._R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_._R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_._R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_._R": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_._R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_._R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_b",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_b",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_b",
+        "write": ".",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_._L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_._L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_._L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_._L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_._L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_._L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_._L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_._L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_._L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_._L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_._L": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_._L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_._L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_b",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_b",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_b",
+        "write": ".",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_b_+": [
+      {
+        "read": ":",
+        "to_state": "readAction_b_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_b_+": [
+      {
+        "read": "R",
+        "to_state": "toDollar_b_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_+_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_+_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_+_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_+_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_+_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_+_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_+_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_+_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_+_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_+_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_+_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_b",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_b",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_b",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_b_+_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_b_+_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_b_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_b_+_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_b_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_b_+_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_b_+_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_b_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_b_+_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_b_+_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_b_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_b_+_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_b_+_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_b_+_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_b_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_b_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_b_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_b_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_b_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_b_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_b_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_b_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_b_+_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_b",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_b",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_b",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "toWrite_c": [
+      {
+        "read": ":",
+        "to_state": "readWrite_c",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readWrite_c": [
+      {
+        "read": "1",
+        "to_state": "toAction_c_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toAction_c_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toAction_c_+",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toAction_c_1": [
+      {
+        "read": ":",
+        "to_state": "readAction_c_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_c_1": [
+      {
+        "read": "R",
+        "to_state": "toDollar_c_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_1_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_1_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_1_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_1_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_1_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_1_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_1_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_1_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_1_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_1_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_1_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_c",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_c",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_c",
+        "write": "1",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_1_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_1_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_1_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_1_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_1_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_1_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_1_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_1_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_1_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_1_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_1_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_c",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_c",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_c",
+        "write": "1",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_c_.": [
+      {
+        "read": ":",
+        "to_state": "readAction_c_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_c_.": [
+      {
+        "read": "R",
+        "to_state": "toDollar_c_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_._L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_._R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_._R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_._R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_._R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_._R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_._R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_._R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_._R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_._R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_._R": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_._R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_._R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_c",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_c",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_c",
+        "write": ".",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_._L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_._L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_._L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_._L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_._L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_._L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_._L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_._L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_._L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_._L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_._L": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_._L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_._L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_c",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_c",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_c",
+        "write": ".",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_c_+": [
+      {
+        "read": ":",
+        "to_state": "readAction_c_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_c_+": [
+      {
+        "read": "R",
+        "to_state": "toDollar_c_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_+_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_+_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_+_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_+_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_+_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_+_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_+_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_+_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_+_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_+_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_+_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_c",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_c",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_c",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_c_+_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_c_+_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_c_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_c_+_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_c_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_c_+_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_c_+_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_c_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_c_+_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_c_+_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_c_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_c_+_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_c_+_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_c_+_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_c_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_c_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_c_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_c_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_c_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_c_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_c_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_c_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_c_+_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_c",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_c",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_c",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "toWrite_d": [
+      {
+        "read": ":",
+        "to_state": "readWrite_d",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readWrite_d": [
+      {
+        "read": "1",
+        "to_state": "toAction_d_1",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toAction_d_.",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toAction_d_+",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toAction_d_1": [
+      {
+        "read": ":",
+        "to_state": "readAction_d_1",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_d_1": [
+      {
+        "read": "R",
+        "to_state": "toDollar_d_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_1_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_1_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_1_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_1_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_1_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_1_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_1_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_1_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_1_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_1_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_1_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_1_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_1_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_1_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_1_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_1_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_d",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_d",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_d",
+        "write": "1",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_1_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_1_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_1_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_1_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_1_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_1_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_1_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_1_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_1_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_1_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_1_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_1_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_1_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_1_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_1_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_1_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_d",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_d",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_d",
+        "write": "1",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_d_.": [
+      {
+        "read": ":",
+        "to_state": "readAction_d_.",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_d_.": [
+      {
+        "read": "R",
+        "to_state": "toDollar_d_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_._L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_._R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_._R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_._R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_._R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_._R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_._R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_._R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_._R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_._R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_._R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_._R": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_._R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_._R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_._R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_._R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_._R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_._R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_d",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_d",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_d",
+        "write": ".",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_._L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_._L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_._L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_._L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_._L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_._L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_._L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_._L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_._L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_._L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_._L": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_._L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_._L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_._L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_._L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_._L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_._L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_d",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_d",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_d",
+        "write": ".",
+        "action": "LEFT"
+      }
+    ],
+    "toAction_d_+": [
+      {
+        "read": ":",
+        "to_state": "readAction_d_+",
+        "write": ":",
+        "action": "RIGHT"
+      }
+    ],
+    "readAction_d_+": [
+      {
+        "read": "R",
+        "to_state": "toDollar_d_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_+_R": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_+_R",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_+_R",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_+_R",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_+_R",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_+_R",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_+_R",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_+_R",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_+_R",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_+_R",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_+_R": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_+_R",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_+_R",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_+_R",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_+_R",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_+_R": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerR_d",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerR_d",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerR_d",
+        "write": "+",
+        "action": "RIGHT"
+      }
+    ],
+    "toDollar_d_+_L": [
+      {
+        "read": "b",
+        "to_state": "toDollar_d_+_L",
+        "write": "b",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "toDollar_d_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "R",
+        "to_state": "toDollar_d_+_L",
+        "write": "R",
+        "action": "RIGHT"
+      },
+      {
+        "read": "L",
+        "to_state": "toDollar_d_+_L",
+        "write": "L",
+        "action": "RIGHT"
+      },
+      {
+        "read": ";",
+        "to_state": "toDollar_d_+_L",
+        "write": ";",
+        "action": "RIGHT"
+      },
+      {
+        "read": "a",
+        "to_state": "toDollar_d_+_L",
+        "write": "a",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "toDollar_d_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": "d",
+        "to_state": "toDollar_d_+_L",
+        "write": "d",
+        "action": "RIGHT"
+      },
+      {
+        "read": ":",
+        "to_state": "toDollar_d_+_L",
+        "write": ":",
+        "action": "RIGHT"
+      },
+      {
+        "read": "+",
+        "to_state": "toDollar_d_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "c",
+        "to_state": "toDollar_d_+_L",
+        "write": "c",
+        "action": "RIGHT"
+      },
+      {
+        "read": "$",
+        "to_state": "atGap_d_+_L",
+        "write": "$",
+        "action": "RIGHT"
+      }
+    ],
+    "atGap_d_+_L": [
+      {
+        "read": "+",
+        "to_state": "atGap_d_+_L",
+        "write": "+",
+        "action": "RIGHT"
+      },
+      {
+        "read": "1",
+        "to_state": "atGap_d_+_L",
+        "write": "1",
+        "action": "RIGHT"
+      },
+      {
+        "read": ".",
+        "to_state": "atGap_d_+_L",
+        "write": ".",
+        "action": "RIGHT"
+      },
+      {
+        "read": "~",
+        "to_state": "atGap_d_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "A",
+        "to_state": "atData_d_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "B",
+        "to_state": "atData_d_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "C",
+        "to_state": "atData_d_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      },
+      {
+        "read": "D",
+        "to_state": "atData_d_+_L",
+        "write": "~",
+        "action": "RIGHT"
+      }
+    ],
+    "atData_d_+_L": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL1_d",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL1_d",
+        "write": "+",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL1_d",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerR_a": [
+      {
+        "read": "~",
+        "to_state": "read_a",
+        "write": "A",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerL1_a": [
+      {
+        "read": "~",
+        "to_state": "placeMarkerL2_a",
+        "write": "~",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL2_a": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL3_a",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL3_a",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL3_a",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL3_a": [
+      {
+        "read": "~",
+        "to_state": "read_a",
+        "write": "A",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerR_b": [
+      {
+        "read": "~",
+        "to_state": "read_b",
+        "write": "B",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerL1_b": [
+      {
+        "read": "~",
+        "to_state": "placeMarkerL2_b",
+        "write": "~",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL2_b": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL3_b",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL3_b",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL3_b",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL3_b": [
+      {
+        "read": "~",
+        "to_state": "read_b",
+        "write": "B",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerR_c": [
+      {
+        "read": "~",
+        "to_state": "read_c",
+        "write": "C",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerL1_c": [
+      {
+        "read": "~",
+        "to_state": "placeMarkerL2_c",
+        "write": "~",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL2_c": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL3_c",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL3_c",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL3_c",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL3_c": [
+      {
+        "read": "~",
+        "to_state": "read_c",
+        "write": "C",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerR_d": [
+      {
+        "read": "~",
+        "to_state": "read_d",
+        "write": "D",
+        "action": "RIGHT"
+      }
+    ],
+    "placeMarkerL1_d": [
+      {
+        "read": "~",
+        "to_state": "placeMarkerL2_d",
+        "write": "~",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL2_d": [
+      {
+        "read": "1",
+        "to_state": "placeMarkerL3_d",
+        "write": "1",
+        "action": "LEFT"
+      },
+      {
+        "read": ".",
+        "to_state": "placeMarkerL3_d",
+        "write": ".",
+        "action": "LEFT"
+      },
+      {
+        "read": "+",
+        "to_state": "placeMarkerL3_d",
+        "write": "+",
+        "action": "LEFT"
+      }
+    ],
+    "placeMarkerL3_d": [
+      {
+        "read": "~",
+        "to_state": "read_d",
+        "write": "D",
+        "action": "RIGHT"
+      }
+    ]
+  }
+}
