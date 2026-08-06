@@ -3,6 +3,7 @@ import sys
 
 STATE_LETTERS = "abcdefghijkmnopqstuvwxyz"
 
+
 def build_utm(target_states, target_finals, target_alphabet, target_blank, rules,
               max_right_pad=6):
     if len(target_states) > len(STATE_LETTERS):
@@ -132,40 +133,64 @@ def build_utm(target_states, target_finals, target_alphabet, target_blank, rules
 
 
 def encode_tape(rules, code, target_states, initial_state, input_syms, blank,
-                right_pad=6):
-    """Build the initial UTM tape string: '#' RULES '$' GAPDATA '#'."""
+                left_pad=3, right_pad=6):
     rule_text = "".join(
         f"{code[s]}:{r}:{code[t]}:{w}:{a};" for (s, r, t, w, a) in rules)
-    data_syms = list(input_syms) + [blank] * right_pad
+
+    data_syms = [blank] * left_pad + list(input_syms) + [blank] * right_pad
     marker = code[initial_state].upper()
-    data = marker + data_syms[0]
-    for sym in data_syms[1:]:
-        data += "~" + sym
+
+    data = ""
+    for i, sym in enumerate(data_syms):
+        if i == left_pad:
+            data += marker + sym
+        else:
+            if i == 0:
+                data += sym
+            else:
+                data += "~" + sym
     data += "~"
     return "#" + rule_text + "$" + data + "#"
 
 
 if __name__ == "__main__":
-    target_states = ["scanright", "scanend", "erase", "HALT"]
-    target_finals = ["HALT"]
-    target_alphabet = ["1", ".", "+"]
-    target_blank = "."
-    rules = [
-        ("scanright", "1", "scanright", "1", "R"),
-        ("scanright", "+", "scanend", "1", "R"),
-        ("scanend", "1", "scanend", "1", "R"),
-        ("scanend", ".", "erase", ".", "L"),
-        ("erase", "1", "HALT", ".", "L"),
-    ]
+    import sys
+    import json
+
+    input_json_path = sys.argv[1] if len(
+        sys.argv) > 1 else "machines/unary_add.json"
+
+    with open(input_json_path, "r") as f:
+        target_machine = json.load(f)
+
+    target_states = target_machine["states"]
+    target_finals = target_machine["finals"]
+    target_alphabet = target_machine["alphabet"]
+    target_blank = target_machine["blank"]
+    initial_state = target_machine["initial"]
+
+    rules = []
+    for state, transitions in target_machine["transitions"].items():
+        for trans in transitions:
+            rules.append((
+                state,
+                trans["read"],
+                trans["to_state"],
+                trans["write"],
+                trans["action"][0]
+            ))
+
     m, code, marker = build_utm(
         target_states, target_finals, target_alphabet, target_blank, rules)
-    outpath = sys.argv[1] if len(
-        sys.argv) > 1 else "./machines/universal.json"
+
+    outpath = "machines/universal.json"
     with open(outpath, "w") as f:
         json.dump(m, f, indent=2)
-    print(f"wrote {outpath}: {len(m['states'])} states, {len(m['alphabet'])} alphabet symbols",
-          file=sys.stderr)
+    print(f"[{outpath}] Universal Turing machine generated")
 
-    tape = encode_tape(rules, code, target_states, "scanright", [
-                       "1", "+", "1", "1"], ".", right_pad=6)
-    print(tape)
+    sample_input_data = ["1", "1", "+", "1", "="]
+tape = encode_tape(rules, code, target_states, initial_state,
+                   sample_input_data, target_blank, left_pad=3, right_pad=6)
+
+print("\n--- Usage command ---")
+print(f"./ft_turing machines/universal.json '{tape}'")

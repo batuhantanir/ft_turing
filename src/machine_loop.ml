@@ -3,7 +3,7 @@ open Tape
 open Utils
 
 let run m tape =
-  let max_steps = 2_000 in
+  let max_steps = 2_000_000 in
 
   let rec loop state t steps =
     Printf.printf "steps: %d max: %d\n" steps max_steps;
