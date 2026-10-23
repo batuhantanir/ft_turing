@@ -11,6 +11,8 @@
     ],
     "blank": ".",
     "states": [
+        "validate_input",
+        "rewind_input",
         "start",
         "right0",
         "right1",
@@ -21,11 +23,51 @@
         "rejectmove",
         "HALT"
     ],
-    "initial": "start",
+    "initial": "validate_input",
     "finals": [
         "HALT"
     ],
     "transitions": {
+        "validate_input": [
+            {
+                "read": "0",
+                "to_state": "validate_input",
+                "write": "0",
+                "action": "RIGHT"
+            },
+            {
+                "read": "1",
+                "to_state": "validate_input",
+                "write": "1",
+                "action": "RIGHT"
+            },
+            {
+                "read": ".",
+                "to_state": "rewind_input",
+                "write": ".",
+                "action": "LEFT"
+            }
+        ],
+        "rewind_input": [
+            {
+                "read": "0",
+                "to_state": "rewind_input",
+                "write": "0",
+                "action": "LEFT"
+            },
+            {
+                "read": "1",
+                "to_state": "rewind_input",
+                "write": "1",
+                "action": "LEFT"
+            },
+            {
+                "read": ".",
+                "to_state": "start",
+                "write": ".",
+                "action": "RIGHT"
+            }
+        ],
         "start": [
             {
                 "read": "X",
