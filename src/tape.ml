@@ -31,7 +31,7 @@ let move_right m t =
 
 let write_head t symbol = { t with head = symbol }
 
-let string_of_tape t =
+let string_of_tape m t =
   let left_str = String.concat "" (List.rev t.left) in
   let right_str = String.concat "" t.right in
 
@@ -42,6 +42,6 @@ let string_of_tape t =
 
   let pad_len = max 0 (target_width - current_len) in
 
-  let padding = String.make pad_len '.' in
+  let padding = String.make pad_len m.blank.[0] in
 
   "[" ^ tape_content ^ padding ^ "]"

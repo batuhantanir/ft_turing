@@ -1,102 +1,50 @@
 # ft_turing
 
-A fully functional Turing Machine simulator written in OCaml, featuring a custom Python generator for a Universal Turing Machine (UTM). This project demonstrates the theoretical foundations of computation, state machines, and the Fetch-Decode-Execute cycle.
+This project simulates a single-head, single-tape Turing machine described by a JSON file. The simulator is written in OCaml.
 
-## 🚀 Features
+## Build and run
 
-*   **Turing Machine Simulator:** Written purely in OCaml, it reads a machine description (in JSON format) and an input string, and simulates the machine's execution step-by-step.
-*   **Tape Visualization:** Features a dynamic, fixed-width sliding window visualization of the infinite tape, keeping the read/write head perfectly centered during execution.
-*   **Universal Turing Machine (UTM):** Includes a Python compiler/generator (`gen_universal.py`) that translates any given Turing Machine into a set of rules encoded directly on a tape.
-*   **Robust Parsing & Validation:** Complete error handling against infinite loops, missing transitions (Machine BLOCKED), and invalid JSON formatting.
+`make` builds the native program with `ocamlopt`; `make byte` builds `ft_turing.byte` with `ocamlc`. The Makefile checks for these tools and uses OPAM to install the compiler if needed.
 
-## 📂 Project Structure
+```sh
+make
+./ft_turing --help
+./ft_turing machines/unary_add.json '111+11='
+```
+
+The program prints the machine description and the tape with its head position before every transition. It reports a missing transition as a blocked machine. Invalid descriptions and inputs produce an error.
+
+## Required machines
+
+1. **Unary addition:** `machines/unary_add.json` computes `111+11=` as five unary ones.
+2. **Palindrome:** `machines/palindrome.json` accepts a binary palindrome and writes `y` at the right end; it writes `n` for a non-palindrome.
+3. **Language 0^n1^n:** `machines/zero_n_one_n.json` writes `y` for words such as `000111` and `n` otherwise.
+4. **Language 0^(2n):** `machines/zero_pow_2n.json` writes `y` for an even number of zeroes and `n` for an odd number.
+5. **Encoded interpreter:** `machines/universal.json` runs the unary-addition machine from an encoded description and input on its tape.
+
+The supplied subtraction example is in `machines/unary_sub.json`.
+
+## Encoded interpreter
+
+`machines/universal.json` is fixed: it does not contain the unary-addition machine's transition table. The encoder in `machines/gen_universal.py` assigns codes to every declared alphabet symbol and state, then creates this tape:
 
 ```text
-.
-├── Makefile                
-├── src/                    
-│   ├── cli.ml, errors.ml, json.ml, machine_loop.ml, main.ml
-│   ├── parse.ml, tape.ml, types.ml, utils.ml, validate.ml
-└── machines/               
-    ├── gen_universal.py
-    ├── palindrome.json, unary_add.json, unary_sub.json
-    ├── universal.json, zero_n_one_n.json, zero_pow_2n.json
-
+#alphabet!states!finals!initial!@transitions$data#
 ```
 
-## 🛠️ Compilation
+Each section contains the codes for the corresponding part of the simulated machine. An uppercase state code marks the simulated head in the data section. The interpreter reads the initial state, checks alphabet and state membership while executing transitions, and checks the final-state list before halting.
 
-To compile the project, simply run the following command at the root of the repository.
+The supplied interpreter has room for 23 non-final states and four alphabet symbols. Its encoded input includes blank cells on both sides; increase `--left-pad` or `--right-pad` when the simulated machine needs more room. The required unary-addition machine fits within these limits.
 
-```bash
-make
-```
+To regenerate the fixed interpreter and run a unary addition:
 
----
-
-## 💻 Usage & Machines
-
-Run the simulator by providing the path to a machine's JSON file and an initial input string.
-
-### 1. Unary Addition (`unary_add.json`)
-![unary_add.png](images/unary_add.png)
-
-Adds two unary numbers separated by a `+`.
-
-```bash
-./ft_turing machines/unary_add.json "111+11="
-```
-
-### 2. Unary Subtraction (`unary_sub.json`)
-![unary_add.png](images/unary_sub.png)
-
-Subtracts the right unary number from the left unary number.
-
-```bash
-./ft_turing machines/unary_sub.json "111-11="
-```
-
-### 3. Palindrome Checker (`palindrome.json`)
-![unary_add.png](images/palindrome.png)
-
-Checks if a given binary string is a palindrome.
-
-```bash
-./ft_turing machines/palindrome.json "111100001111"
-```
-
-### 4. Language Rejection 0^n1^n (`zero_n_one_n.json`)
-![unary_add.png](images/zero_n_one_n.png)
-
-Tests a string against the 0^n1^n rule.
-
-```bash
-./ft_turing machines/zero_n_one_n.json "111000"
-```
-
-### 5. Parity/Sequence Checker (`zero_pow_2n.json`)
-![unary_add.png](images/zero_pow_2n.png)
-
-Checks parity rules based on specific state toggling.
-
-```bash
-./ft_turing machines/zero_pow_2n.json "000000"
-```
-
----
-
-## 🧠 The Universal Turing Machine (UTM)
-
-The pinnacle of this project is the Universal Turing Machine. Instead of hardcoding states into a machine, the UTM reads its operating instructions directly from the tape!
-
-**Step 1:** Generate the UTM hardware (JSON) and the encoded tape data using the Python builder.
-
-```bash
+```sh
 python3 machines/gen_universal.py
+./ft_turing machines/universal.json "$(python3 machines/gen_universal.py --input '11+1=' --tape-only)" | tail -n 1
 ```
 
-**Step 2:** Run the generated tape in the Universal Machine. *(Note: Always wrap the tape string in single quotes `''` to prevent shell variable expansion of the `$` character).*
+The same interpreter can run a different description without regenerating its JSON:
 
-```bash
-./ft_turing machines/universal.json '#a:1:a:1:R;a:+:b:1:R;b:1:b:1:R;b:=:c:.:L;c:1:d:.:L;d:1:d:1:L;d:.:e:.:R;$.~.~.A1~1~+~1~=~.~.~.~.~.~.~#'
+```sh
+./ft_turing machines/universal.json "$(python3 machines/gen_universal.py --machine machines/zero_pow_2n.json --input '0000' --tape-only)" | tail -n 1
 ```

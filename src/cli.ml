@@ -11,7 +11,7 @@ let usage () =
     \  -h, --help            show this help message and exit\n"
 
 let print_header m =
-  let width = 80 in
+  let width = max 80 (String.length m.name + 4) in
   let bar = String.make width '*' in
   let center s =
     let pad = max 0 ((width - 2 - String.length s) / 2) in

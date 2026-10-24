@@ -23,3 +23,6 @@ type json =
   | JString of string
   | JList of json list
   | JObj of (string * json) list
+  | JNumber of string
+  | JBool of bool
+  | JNull

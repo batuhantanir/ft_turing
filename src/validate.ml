@@ -24,6 +24,14 @@ let validate_machine m =
   check_duplicates m.alphabet;
 
   if m.states = [] then fail "states must not be empty";
+  let rec check_named_duplicates kind = function
+    | [] -> ()
+    | name :: rest ->
+        if List.mem name rest then fail "%s contains duplicate '%s'" kind name;
+        check_named_duplicates kind rest
+  in
+  check_named_duplicates "states" m.states;
+  check_named_duplicates "finals" m.finals;
 
   if not (List.mem m.initial m.states) then
     fail "initial state '%s' must be part of the states list" m.initial;
@@ -38,6 +46,8 @@ let validate_machine m =
     (fun (state, trs) ->
       if not (List.mem state m.states) then
         fail "transition declared for undeclared state '%s'" state;
+      let reads = List.map (fun t -> t.read) trs in
+      check_named_duplicates ("transitions for state '" ^ state ^ "'") reads;
       List.iter
         (fun t ->
           if not (List.mem t.read m.alphabet) then
